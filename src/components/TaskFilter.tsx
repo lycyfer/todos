@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useTaskStore } from "../store/tashStore";
 import { FilterType } from "../types/types";
 
@@ -12,13 +11,22 @@ export const TaskFilter = ({ filter, setFilter }: TaskFilterProps) => {
 
   return (
     <div className="taskFilter">
-      <button className="all-btn" onClick={() => setFilter("all")}>
+      <button 
+        className={`all-btn ${filter === 'all' ? 'active' : ''}`} 
+        onClick={() => setFilter("all")}
+      >
         All <span>{tasks.length}</span>
       </button>
-      <button className="active-btn" onClick={() => setFilter("active")}>
+      <button 
+        className={`active-btn ${filter === 'active' ? 'active' : ''}`}
+        onClick={() => setFilter("active")}
+      >
         Active <span>{tasks.filter((t) => !t.completed).length}</span>
       </button>
-      <button className="end-btn" onClick={() => setFilter("completed")}>
+      <button 
+        className={`end-btn ${filter === 'completed' ? 'active' : ''}`}
+        onClick={() => setFilter("completed")}
+      >
         Completed <span>{tasks.filter((t) => t.completed).length}</span>
       </button>
     </div>
