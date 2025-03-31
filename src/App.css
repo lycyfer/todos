@@ -1,0 +1,48 @@
+#root {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  /* position: relative; */
+}
+
+.title {
+  font-size: 300px;
+  color: rgba(256, 256, 256, 0.02);
+  text-align: start;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 1;
+  font-weight: 700;
+  bottom: 0;
+  right: 45%;
+}
+
+.todos {
+  margin: 200px auto;
+  width: 100%;
+  padding: 20px 40px;
+  background: linear-gradient(#121419, #121419) padding-box,
+    linear-gradient(to left, rgba(24, 71, 177, 0.2), rgba(161, 196, 247, 0.2)) border-box;
+  color: #dbe6ff;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1000;
+}
+
+.todos-main {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  gap: 10px;
+
+}
+
+.todos-task {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
